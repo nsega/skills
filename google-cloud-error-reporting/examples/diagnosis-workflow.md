@@ -1,6 +1,6 @@
 # Example Diagnosis Workflow
 
-This document demonstrates a complete workflow for diagnosing a GCP error using Claude Code with the gcp-error-reporting skill.
+This document demonstrates a complete workflow for diagnosing a GCP error using Claude Code with the google-cloud-error-reporting skill.
 
 ## Scenario
 
@@ -12,7 +12,7 @@ A production API service is experiencing errors. The team needs to quickly ident
 
 **User Command:**
 ```
-Use the gcp-error-reporting skill to check for errors in my-api-project from the last 6 hours
+Use the google-cloud-error-reporting skill to check for errors in my-api-project from the last 6 hours
 ```
 
 **Claude's Actions:**
@@ -421,4 +421,4 @@ This workflow demonstrates:
 3. **Fix Implementation**: Created branch, wrote code and tests
 4. **Verification**: Monitored results and confirmed resolution
 
-The entire process, from detection to verification, can be completed in minutes with Claude Code using the gcp-error-reporting skill.
+The entire process, from detection to verification, can be completed in minutes with Claude Code using the google-cloud-error-reporting skill.

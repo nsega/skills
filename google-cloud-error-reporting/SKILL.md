@@ -1,5 +1,5 @@
 ---
-name: gcp-error-reporting
+name: google-cloud-error-reporting
 description: Integrate Google Cloud Error Reporting with Claude Code for automated error diagnosis. Use when you need to fetch errors from GCP Error Reporting, search the codebase for related code, and provide quick diagnosis of production issues.
 allowed-tools:
   - Bash
@@ -614,7 +614,7 @@ Before deploying, check for existing error patterns:
 
 ```bash
 # In CI/CD pipeline
-claude-code --skill gcp-error-reporting \
+claude-code --skill google-cloud-error-reporting \
   "Check production errors for patterns we might have fixed in this deploy"
 ```
 
@@ -627,7 +627,7 @@ After deployment, monitor for new errors:
 sleep 600
 
 # Check for new errors
-claude-code --skill gcp-error-reporting \
+claude-code --skill google-cloud-error-reporting \
   "Check for any new errors since the v2.1.0 deployment"
 ```
 

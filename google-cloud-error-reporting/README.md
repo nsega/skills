@@ -36,7 +36,7 @@ gcloud auth application-default login
 
 ```bash
 # Run the setup script
-cd gcp-error-reporting/scripts
+cd google-cloud-error-reporting/scripts
 chmod +x setup-service-account.sh
 ./setup-service-account.sh YOUR_PROJECT_ID
 
@@ -55,7 +55,7 @@ gcloud services enable clouderrorreporting.googleapis.com --project=YOUR_PROJECT
 In Claude Code, simply mention you want to analyze GCP errors:
 
 ```
-Use the gcp-error-reporting skill to check for errors in my-api-project from the last 24 hours
+Use the google-cloud-error-reporting skill to check for errors in my-api-project from the last 24 hours
 ```
 
 ## Example Usage
