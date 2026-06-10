@@ -1,0 +1,165 @@
+{
+  "errorGroupStats": [
+    {
+      "group": {
+        "name": "projects/my-api-project/groups/abc123def456",
+        "groupId": "abc123def456",
+        "trackingIssues": [],
+        "resolutionStatus": "OPEN"
+      },
+      "count": "150",
+      "affectedUsersCount": "75",
+      "timedCounts": [
+        {
+          "count": "50",
+          "startTime": "2025-11-01T10:00:00Z",
+          "endTime": "2025-11-01T11:00:00Z"
+        },
+        {
+          "count": "100",
+          "startTime": "2025-11-01T11:00:00Z",
+          "endTime": "2025-11-01T12:00:00Z"
+        }
+      ],
+      "firstSeenTime": "2025-11-01T10:15:32Z",
+      "numAffectedServices": 1,
+      "representative": {
+        "message": "TypeError: Cannot read property 'id' of undefined\n    at getUserById (/app/src/handlers/user.js:89:15)\n    at async handleRequest (/app/src/handlers/api.js:142:20)\n    at async processRequest (/app/src/middleware/router.js:56:12)",
+        "serviceContext": {
+          "service": "api-service",
+          "version": "1.2.3",
+          "resourceType": "cloud_run_revision"
+        },
+        "context": {
+          "httpRequest": {
+            "method": "GET",
+            "url": "https://api.example.com/users/12345",
+            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+            "referrer": "https://app.example.com/dashboard",
+            "responseStatusCode": 500,
+            "remoteIp": "203.0.113.42"
+          },
+          "user": "user-67890",
+          "reportLocation": {
+            "filePath": "/app/src/handlers/user.js",
+            "lineNumber": 89,
+            "functionName": "getUserById"
+          },
+          "sourceReferences": [
+            {
+              "repository": "https://github.com/example-org/api-service",
+              "revisionId": "abc123def456789"
+            }
+          ]
+        },
+        "eventTime": "2025-11-01T11:45:22Z"
+      }
+    },
+    {
+      "group": {
+        "name": "projects/my-api-project/groups/def456ghi789",
+        "groupId": "def456ghi789",
+        "trackingIssues": [],
+        "resolutionStatus": "OPEN"
+      },
+      "count": "45",
+      "affectedUsersCount": "23",
+      "timedCounts": [
+        {
+          "count": "15",
+          "startTime": "2025-11-01T10:00:00Z",
+          "endTime": "2025-11-01T11:00:00Z"
+        },
+        {
+          "count": "30",
+          "startTime": "2025-11-01T11:00:00Z",
+          "endTime": "2025-11-01T12:00:00Z"
+        }
+      ],
+      "firstSeenTime": "2025-11-01T10:22:15Z",
+      "numAffectedServices": 1,
+      "representative": {
+        "message": "Error: Database connection timeout\n    at DatabaseClient.connect (/app/src/db/client.js:45:12)\n    at UserRepository.findById (/app/src/repositories/user.js:34:18)\n    at UserService.getUser (/app/src/services/user.js:23:25)",
+        "serviceContext": {
+          "service": "api-service",
+          "version": "1.2.3",
+          "resourceType": "cloud_run_revision"
+        },
+        "context": {
+          "httpRequest": {
+            "method": "POST",
+            "url": "https://api.example.com/auth/login",
+            "userAgent": "MyApp/1.0.0 (iOS 17.0)",
+            "responseStatusCode": 503,
+            "remoteIp": "198.51.100.23"
+          },
+          "reportLocation": {
+            "filePath": "/app/src/db/client.js",
+            "lineNumber": 45,
+            "functionName": "connect"
+          },
+          "sourceReferences": [
+            {
+              "repository": "https://github.com/example-org/api-service",
+              "revisionId": "abc123def456789"
+            }
+          ]
+        },
+        "eventTime": "2025-11-01T11:52:08Z"
+      }
+    },
+    {
+      "group": {
+        "name": "projects/my-api-project/groups/ghi789jkl012",
+        "groupId": "ghi789jkl012",
+        "trackingIssues": [],
+        "resolutionStatus": "OPEN"
+      },
+      "count": "12",
+      "affectedUsersCount": "8",
+      "timedCounts": [
+        {
+          "count": "7",
+          "startTime": "2025-11-01T10:00:00Z",
+          "endTime": "2025-11-01T11:00:00Z"
+        },
+        {
+          "count": "5",
+          "startTime": "2025-11-01T11:00:00Z",
+          "endTime": "2025-11-01T12:00:00Z"
+        }
+      ],
+      "firstSeenTime": "2025-11-01T10:35:47Z",
+      "numAffectedServices": 1,
+      "representative": {
+        "message": "ValidationError: Invalid email format\n    at validateEmail (/app/src/validators/email.js:12:10)\n    at UserController.register (/app/src/controllers/user.js:67:8)",
+        "serviceContext": {
+          "service": "api-service",
+          "version": "1.2.3",
+          "resourceType": "cloud_run_revision"
+        },
+        "context": {
+          "httpRequest": {
+            "method": "POST",
+            "url": "https://api.example.com/users/register",
+            "userAgent": "PostmanRuntime/7.32.0",
+            "responseStatusCode": 400,
+            "remoteIp": "192.0.2.15"
+          },
+          "reportLocation": {
+            "filePath": "/app/src/validators/email.js",
+            "lineNumber": 12,
+            "functionName": "validateEmail"
+          },
+          "sourceReferences": [
+            {
+              "repository": "https://github.com/example-org/api-service",
+              "revisionId": "abc123def456789"
+            }
+          ]
+        },
+        "eventTime": "2025-11-01T11:58:33Z"
+      }
+    }
+  ]
+}
